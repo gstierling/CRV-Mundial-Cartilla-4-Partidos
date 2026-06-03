@@ -16,7 +16,6 @@
       overflow-x: hidden;
     }
 
-    /* Fondo mundialista */
     body::before {
       content: "";
       position: fixed; inset: 0; z-index: 0;
@@ -25,84 +24,78 @@
         radial-gradient(circle at 80% 70%, rgba(0,100,0,0.85) 0%, transparent 55%),
         #1a4a1a;
     }
-    /* Líneas de cancha */
     body::after {
       content: "";
       position: fixed; inset: 0; z-index: 0;
       background-image:
-        /* Círculo central */
         radial-gradient(circle at 50% 50%, transparent 14%, rgba(255,255,255,0.12) 14.5%, rgba(255,255,255,0.12) 15%, transparent 15.5%),
-        /* Línea central */
         linear-gradient(to right, transparent 49.8%, rgba(255,255,255,0.12) 49.8%, rgba(255,255,255,0.12) 50.2%, transparent 50.2%),
-        /* Línea lateral izquierda */
         linear-gradient(to right, transparent 4.8%, rgba(255,255,255,0.1) 4.8%, rgba(255,255,255,0.1) 5.2%, transparent 5.2%),
-        /* Línea lateral derecha */
         linear-gradient(to right, transparent 94.8%, rgba(255,255,255,0.1) 94.8%, rgba(255,255,255,0.1) 95.2%, transparent 95.2%);
     }
 
     .card {
       position: relative; z-index: 1;
-      background: #1a1a2e;
-      border-radius: 20px; padding: 24px 28px;
+      background: #f8fafc;
+      border-radius: 20px; padding: 26px 30px;
       max-width: 500px; width: 100%;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
     }
 
-    .header { text-align: center; margin-bottom: 20px; }
-    .header .ball { font-size: 36px; margin-bottom: 6px; }
-    .header h1 { font-size: 20px; font-weight: 800; color: #ffffff; line-height: 1.2; }
-    .header h2 { font-size: 13px; font-weight: 500; color: #f59e0b; margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; }
+    .header { text-align: center; margin-bottom: 22px; }
+    .header .ball { font-size: 38px; margin-bottom: 6px; }
+    .header h1 { font-size: 22px; font-weight: 800; color: #1a202c; line-height: 1.2; }
+    .header h2 { font-size: 14px; font-weight: 600; color: #d97706; margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; }
 
-    .field { margin-bottom: 12px; }
-    .field label { display: block; font-size: 12px; font-weight: 600; color: #94a3b8; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .field .hint { font-size: 11px; color: #64748b; margin-bottom: 5px; font-style: italic; }
+    .field { margin-bottom: 13px; }
+    .field label { display: block; font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .field .hint { font-size: 12px; color: #64748b; margin-bottom: 5px; font-style: italic; }
     .field input[type="text"] {
-      width: 100%; padding: 9px 12px;
-      border: 1.5px solid #334155; border-radius: 8px;
-      font-size: 14px; outline: none;
-      background: #0f172a; color: #f1f5f9;
+      width: 100%; padding: 10px 13px;
+      border: 1.5px solid #cbd5e0; border-radius: 8px;
+      font-size: 15px; outline: none;
+      background: white; color: #1a202c;
     }
     .field input[type="text"]:focus { border-color: #3b82f6; }
-    .field input[type="text"]::placeholder { color: #475569; }
+    .field input[type="text"]::placeholder { color: #94a3b8; }
 
     .partidos { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
 
     .partido {
-      background: #0f172a;
-      border: 1px solid #1e3a5f;
+      background: white;
+      border: 1.5px solid #e2e8f0;
       border-radius: 12px; padding: 12px 16px;
     }
     .partido .teams {
       display: flex; align-items: center; justify-content: space-between; gap: 8px;
     }
-    .score-input { display: flex; flex-direction: column; align-items: center; gap: 3px; flex: 1; }
+    .score-input { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
     .score-input span {
-      font-size: 11px; color: #94a3b8; font-weight: 600;
+      font-size: 13px; color: #334155; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.5px; text-align: center; line-height: 1.2;
     }
     .score-input input[type="number"] {
-      width: 56px; height: 52px; font-size: 24px; font-weight: 700;
-      text-align: center; border: 1.5px solid #334155; border-radius: 10px;
-      outline: none; color: #f1f5f9; background: #1e293b;
+      width: 60px; height: 54px; font-size: 26px; font-weight: 700;
+      text-align: center; border: 1.5px solid #cbd5e0; border-radius: 10px;
+      outline: none; color: #1a202c; background: #f8fafc;
     }
-    .score-input input[type="number"]:focus { border-color: #3b82f6; }
-    .vs { font-size: 18px; font-weight: 900; color: #475569; flex-shrink: 0; }
+    .score-input input[type="number"]:focus { border-color: #3b82f6; background: white; }
+    .vs { font-size: 20px; font-weight: 900; color: #94a3b8; flex-shrink: 0; }
 
     button {
-      width: 100%; padding: 13px; border-radius: 12px; border: none;
-      font-size: 15px; font-weight: 700; cursor: pointer;
+      width: 100%; padding: 14px; border-radius: 12px; border: none;
+      font-size: 16px; font-weight: 700; cursor: pointer;
       background: linear-gradient(135deg, #f59e0b, #ef4444);
-      color: white; box-shadow: 0 4px 15px rgba(245,158,11,0.4);
+      color: white; box-shadow: 0 4px 15px rgba(245,158,11,0.35);
       transition: opacity 0.2s; letter-spacing: 0.5px;
     }
-    button:disabled { background: #1e293b; color: #475569; box-shadow: none; cursor: not-allowed; }
+    button:disabled { background: #e2e8f0; color: #94a3b8; box-shadow: none; cursor: not-allowed; }
 
-    .msg { margin-top: 12px; padding: 12px; border-radius: 10px; text-align: center; font-weight: 600; font-size: 13px; }
-    .msg.success { background: #052e16; border: 1px solid #16a34a; color: #4ade80; }
-    .msg.error   { background: #2d0a0a; border: 1px solid #dc2626; color: #f87171; }
+    .msg { margin-top: 12px; padding: 12px; border-radius: 10px; text-align: center; font-weight: 600; font-size: 14px; }
+    .msg.success { background: #f0fff4; border: 1px solid #86efac; color: #166534; }
+    .msg.error   { background: #fff5f5; border: 1px solid #fca5a5; color: #991b1b; }
 
-    .footer { text-align: center; font-size: 10px; color: #334155; margin-top: 12px; }
+    .footer { text-align: center; font-size: 11px; color: #94a3b8; margin-top: 12px; }
   </style>
 </head>
 <body>
@@ -122,6 +115,11 @@
   <div class="field">
     <label>🪪 RUT</label>
     <input type="text" id="rut" placeholder="Ej: 12.345.678-9" />
+  </div>
+
+  <div class="field">
+    <label>📱 Celular</label>
+    <input type="text" id="celular" placeholder="Ej: +56 9 1234 5678" />
   </div>
 
   <div class="partidos">
@@ -171,10 +169,11 @@
   async function enviar() {
     const nombre = document.getElementById("nombre").value.trim();
     const rut = document.getElementById("rut").value.trim();
+    const celular = document.getElementById("celular").value.trim();
     const campos = ["mex","sud","cor","che","can","bos","eua","par"];
     const valores = campos.map(id => document.getElementById(id).value);
 
-    if (!nombre || !rut || valores.some(v => v === "")) {
+    if (!nombre || !rut || !celular || valores.some(v => v === "")) {
       mostrarMensaje("Por favor completa todos los campos.", "error");
       return;
     }
@@ -183,7 +182,7 @@
     btn.disabled = true;
     btn.textContent = "⏳ Enviando...";
 
-    const data = { nombre, rut };
+    const data = { nombre, rut, celular };
     campos.forEach(id => data[id] = parseInt(document.getElementById(id).value));
 
     try {
@@ -196,6 +195,7 @@
       mostrarMensaje("✅ ¡Pronóstico registrado! Gracias por participar.", "success");
       document.getElementById("nombre").value = "";
       document.getElementById("rut").value = "";
+      document.getElementById("celular").value = "";
       campos.forEach(id => document.getElementById(id).value = "");
     } catch (e) {
       mostrarMensaje("❌ No se pudo enviar. Intenta de nuevo.", "error");
