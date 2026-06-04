@@ -45,6 +45,7 @@
     .header { text-align: center; margin-bottom: 22px; }
     .header .ball { font-size: 38px; margin-bottom: 6px; }
     .header h1 { font-size: 22px; font-weight: 800; color: #1a202c; line-height: 1.2; }
+    .header h1 span.crv { font-size: 33px; display: block; }
     .header h2 { font-size: 14px; font-weight: 600; color: #d97706; margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; }
 
     .field { margin-bottom: 13px; }
@@ -102,23 +103,23 @@
 <div class="card">
   <div class="header">
     <div class="ball">⚽</div>
-    <h1>CicloRecreoVía<br>Cartilla Mundial 2026</h1>
+    <h1><span class="crv">CicloRecreoVía</span>Mini Cartilla Mundial 2026</h1>
     <h2>Partidos 1, 2, 3 y 4</h2>
   </div>
 
   <div class="field">
-    <label>👤 Tu nombre</label>
+    <label>NOMBRE</label>
     <p class="hint">Este nombre será público, por lo que, si prefieres, puedes colocar un nombre de fantasía.</p>
     <input type="text" id="nombre" placeholder="Escribe tu nombre..." />
   </div>
 
   <div class="field">
-    <label>🪪 RUT</label>
+    <label>RUT</label>
     <input type="text" id="rut" placeholder="Ej: 12.345.678-9" />
   </div>
 
   <div class="field">
-    <label>📱 Celular</label>
+    <label>CELULAR</label>
     <input type="text" id="celular" placeholder="Ej: +56 9 1234 5678" />
   </div>
 
@@ -164,7 +165,7 @@
 </div>
 
 <script>
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzvWlRCUDLJ-h3SaKTS1XjkPQSmafjBF0-glN503hPXf0NHcv5SCy21oyEWZg9lYmGF/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyYRpSsPU07sbD51H3rkfF4n8uBl_DMziyJaOscamLsRB7CG-VEKVAG3fXf6TRTeDw/exec";
 
   async function enviar() {
     const nombre = document.getElementById("nombre").value.trim();
